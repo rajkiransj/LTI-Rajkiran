@@ -1,0 +1,41 @@
+<h3>Add Movie</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Movie Name</label>
+      <input type="text" class="form-control" id="movieName" required [(ngModel)]="movie.name" name="movieName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Category</label>
+      <input type="text" class="form-control" id="movieCategory" required [(ngModel)]="movie.category" name="movieCategory">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Producer</label>
+      <input type="text" class="form-control" id="movieProducer" required [(ngModel)]="movie.producer" name="movieProducer">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Director</label>
+      <input type="text" class="form-control" id="movieDirector" required [(ngModel)]="movie.director" name="movieDirector">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Release Date</label>
+      <input type="text" placeholder="dd/MM/yyyy" class="form-control" id="movieReleaseDate" required [(ngModel)]="movie.releaseDate" name="movieReleaseDate">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success !</strong> Your data saved successfully.
+    <button (click) = "closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <button class="btn btn-success" (click)="newMovie()">Add</button>
+</div>

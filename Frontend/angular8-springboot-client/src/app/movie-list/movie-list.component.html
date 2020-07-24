@@ -1,0 +1,33 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Moives List</h2>
+    
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Movie Name</th>
+          <th>Category</th>
+          <th>Producer</th>
+          <th>Director</th>
+          <th>Release Date</th>
+          <th>Delete & Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let moive of movies | async">
+          <td>{{moive.name}}</td>
+          <td>{{moive.category}}</td>
+          <td>{{moive.producer}}</td>
+          <td>{{moive.director}}</td>
+          <td>{{moive.releaseDate}}</td>
+          <td><button (click)="deleteMovie(moive.id)" class="btn btn-danger">Delete</button>
+              <button (click)="updateMoive(moive.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

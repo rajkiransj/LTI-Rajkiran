@@ -1,0 +1,30 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Multiplex List</h2>
+    
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Multiplex Name</th>
+          <th>Location</th>
+          <th>No Of Screens</th>
+          <th>Delete & Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let multiplex of multiplexlist | async">
+          <td>{{multiplex.name}}</td>
+          <td>{{multiplex.location}}</td>
+          <td>{{multiplex.numberOfScreens}}</td>
+         
+          <td><button (click)="deleteMultiplex(multiplex.multiplexId)" class="btn btn-danger">Delete</button>
+              <button (click)="updateMultiplex(multiplex.multiplexId)" class="btn btn-info" style="margin-left: 10px">Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

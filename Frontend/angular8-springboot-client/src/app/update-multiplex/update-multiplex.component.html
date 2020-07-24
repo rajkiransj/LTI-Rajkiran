@@ -1,0 +1,21 @@
+<h3>Add Multiplex</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Multiplex Name</label>
+      <input type="text" class="form-control" id="mplexName" required [(ngModel)]="mplex.name" name="mplexName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Location</label>
+      <input type="text" class="form-control" id="mplexlocation" required [(ngModel)]="mplex.location" name="mplexlocation">
+    </div>
+
+    <div class="form-group">
+      <label for="name">No of Screens</label>
+      <input type="text" class="form-control" id="mplexnoofscreens" required [(ngModel)]="mplex.numberOfScreens" name="mplexnoofscreens">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
