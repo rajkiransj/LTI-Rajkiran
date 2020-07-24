@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "response.messagetype.success",
+    "type": "java.lang.String",
+    "description": "A description for 'response.messagetype.success'"
+  },
+  {
+    "name": "response.messagetype.failure",
+    "type": "java.lang.String",
+    "description": "A description for 'response.messagetype.failure'"
+  }
+]}
